@@ -239,7 +239,7 @@ async def tmdb_get(
 
 async def tmdb_cards_from_results(
     results: List[dict],
-    limits: int = 20
+    limit: int = 20
 ) -> List[TMDBMovieCard]:
     """
     Convert raw TMDB search results into
@@ -264,7 +264,7 @@ async def tmdb_cards_from_results(
 
     out: List[TMDBMovieCard] = []
 
-    for m in (results or [])[:limits]:
+    for m in (results or [])[:limit]:
         out.append(
             TMDBMovieCard(
                 tmdb_id=int(m["id"]),
@@ -600,7 +600,7 @@ async def recommend_genre(
             "page": 1,
         },
     )
-    cards = await tmdb_cards_from_results(discover.get("results", []), limit=limit)
+    cards = await tmdb_cards_from_results(discover.get("results", []), limits=limit)
     return [c for c in cards if c.tmdb_id != tmdb_id]
 
 
@@ -672,7 +672,7 @@ async def search_bundle(
             },
         )
         cards = await tmdb_cards_from_results(
-            discover.get("results", []), limit=genre_limit
+            discover.get("results", []), limits=genre_limit
         )
         genre_recs = [c for c in cards if c.tmdb_id != details.tmdb_id]
 
