@@ -2,95 +2,133 @@
 
 A content-based Movie Recommendation System built with **Python**, **Streamlit**, **Scikit-Learn**, and the **TMDB API**.
 
-The application recommends similar movies based on movie metadata and displays rich movie information including posters, ratings, release dates, and recommendations.
+The application recommends similar movies using machine learning techniques and displays rich movie information including posters, ratings, release dates, genres, and recommendations.
 
 ---
 
-## ✨ Features
+# 🌐 Live Demo
 
-### 🏠 Home Page
-- Trending movies from TMDB
-- Responsive movie card layout
-- Adjustable grid columns
-- Movie posters and basic information
+### 🚀 Try the Application
 
-### 🔍 Movie Search
-- Search movies by title
-- Instant matching results
-- Interactive movie cards
+**Live Website:**
+https://souritdev-movie-recommendation-system-app-yrirds.streamlit.app
 
-### 🎥 Movie Details
-- Poster and movie overview
-- Release date
-- TMDB rating
-- Genre information
-- Recommendation engine
+### 📂 Source Code
 
-### 🤖 Recommendation Engine
-- Content-based filtering
-- TF-IDF vectorization
-- Cosine similarity scoring
-- Similar movie suggestions
+**GitHub Repository:**
+https://github.com/Souritdev/movie-recommendation-system
 
 ---
 
-## 🛠️ Tech Stack
+# ✨ Features
 
-### Frontend
-- Streamlit
+## 🏠 Home Page
 
-### Backend
-- Python
+* Displays trending and popular movies from TMDB
+* Responsive movie card layout
+* Adjustable grid columns
+* Movie posters and ratings
+* Dynamic category selection
 
-### Machine Learning
-- Scikit-Learn
-- TF-IDF Vectorizer
-- Cosine Similarity
+## 🔍 Smart Movie Search
 
-### Data Sources
-- TMDB API
+* Search movies by title
+* Instant matching results
+* Interactive movie cards
+* Fast movie discovery experience
 
-### Data Processing
-- Pandas
-- NumPy
+## 🎥 Movie Details
+
+* High-quality movie posters
+* Overview and storyline
+* Release date information
+* TMDB ratings
+* Genre information
+* Cast and movie metadata
+
+## 🤖 Recommendation Engine
+
+* Content-based filtering
+* TF-IDF vectorization
+* Cosine similarity scoring
+* Personalized movie suggestions
+* Similar movie recommendations
 
 ---
 
-## 📂 Project Structure
+# 🛠️ Tech Stack
+
+## Frontend
+
+* Streamlit
+
+## Backend
+
+* Python
+
+## Machine Learning
+
+* Scikit-Learn
+* TF-IDF Vectorizer
+* Cosine Similarity
+
+## Data Processing
+
+* Pandas
+* NumPy
+
+## APIs & Data Sources
+
+* TMDB API
+
+---
+
+# 📂 Project Structure
 
 ```text
 movie-recommendation-system/
 │
-├── app.py                 # Streamlit application
-├── main.py                # Backend logic
+├── app.py
+├── main.py
 ├── requirements.txt
 │
-├── df.pkl                 # Movie dataset
-├── tfidf.pkl              # Trained TF-IDF vectorizer
-├── tfidf_matrix.pkl       # TF-IDF matrix
-├── indices.pkl            # Movie index mapping
+├── df.pkl
+├── tfidf.pkl
+├── tfidf_matrix.pkl
+├── indices.pkl
 │
 └── README.md
 ```
 
+### File Description
+
+| File             | Purpose                                 |
+| ---------------- | --------------------------------------- |
+| app.py           | Streamlit frontend application          |
+| main.py          | Backend logic and recommendation engine |
+| df.pkl           | Processed movie dataset                 |
+| tfidf.pkl        | Trained TF-IDF vectorizer               |
+| tfidf_matrix.pkl | TF-IDF feature matrix                   |
+| indices.pkl      | Movie title index mapping               |
+
 ---
 
-## 🚀 Installation
+# 🚀 Installation
 
-### 1. Clone the repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Souritdev/movie-recommendation-system.git
 cd movie-recommendation-system
 ```
 
-### 2. Create a virtual environment
+## 2. Create a Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it:
+### Activate the Environment
 
 #### Windows
 
@@ -98,13 +136,15 @@ Activate it:
 .venv\Scripts\activate
 ```
 
-#### macOS / Linux
+#### macOS/Linux
 
 ```bash
 source .venv/bin/activate
 ```
 
-### 3. Install dependencies
+---
+
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -112,19 +152,19 @@ pip install -r requirements.txt
 
 ---
 
-## 🔑 TMDB API Setup
+# 🔑 TMDB API Configuration
 
-Create a TMDB account:
+Create a free account at:
 
 https://www.themoviedb.org/
 
-Generate an API key and create a `.env` file:
+Generate an API Key and create a `.env` file:
 
 ```env
 TMDB_API_KEY=your_api_key_here
 ```
 
-Or for Streamlit Cloud:
+For Streamlit Cloud deployment:
 
 ```toml
 TMDB_API_KEY = "your_api_key_here"
@@ -132,13 +172,15 @@ TMDB_API_KEY = "your_api_key_here"
 
 ---
 
-## ▶️ Run Locally
+# ▶️ Run Locally
+
+Start the Streamlit application:
 
 ```bash
 streamlit run app.py
 ```
 
-The application will be available at:
+Application URL:
 
 ```text
 http://localhost:8501
@@ -146,53 +188,73 @@ http://localhost:8501
 
 ---
 
-## ☁️ Deployment
+# ☁️ Deployment
 
-This project can be deployed on:
+The project can be deployed on:
 
-- Streamlit Community Cloud
-- Render
-- Railway
-- Azure App Service
-- AWS
+* Streamlit Community Cloud
+* Render
+* Railway
+* Azure App Service
+* AWS
 
-### Streamlit Cloud
+## Streamlit Community Cloud
 
-1. Push the repository to GitHub
-2. Create a new Streamlit app
-3. Select repository and branch
-4. Set:
+### Step 1
+
+Push your project to GitHub.
+
+### Step 2
+
+Open Streamlit Community Cloud.
+
+### Step 3
+
+Create a new application.
+
+### Step 4
+
+Select:
 
 ```text
-Main file path: app.py
+Repository: movie-recommendation-system
+Branch: main
+Main File: app.py
 ```
 
-5. Add your TMDB API key in Secrets:
+### Step 5
+
+Add Secrets:
 
 ```toml
-TMDB_API_KEY = "your_api_key"
+TMDB_API_KEY = "your_api_key_here"
 ```
 
-6. Deploy
+### Step 6
+
+Deploy the application.
 
 ---
 
-## 📊 Recommendation Workflow
+# 📊 Recommendation Workflow
 
 ```text
 Movie Selected
        │
        ▼
+Metadata Processing
+       │
+       ▼
 TF-IDF Feature Extraction
        │
        ▼
-Cosine Similarity
+Cosine Similarity Calculation
        │
        ▼
 Top Similar Movies
        │
        ▼
-TMDB Metadata Fetch
+TMDB Metadata Retrieval
        │
        ▼
 Recommendations Displayed
@@ -200,76 +262,98 @@ Recommendations Displayed
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-### Home Page
+## Home Page
 
-- Trending movies
-- Responsive card layout
-- Search functionality
+* Trending Movies
+* Responsive Grid Layout
+* Search Functionality
+* Dynamic Categories
 
-### Movie Details
+## Movie Details
 
-- Poster
-- Overview
-- Ratings
-- Recommendations
-
----
-
-## 🔮 Future Improvements
-
-- User authentication
-- Collaborative filtering
-- Personalized recommendations
-- Watchlist support
-- Genre-based filtering
-- Advanced search
-- Movie trailers
-- Favorites system
+* Movie Poster
+* Overview
+* Ratings
+* Genres
+* Recommendations
 
 ---
 
-## 🤝 Contributing
+# 🔮 Future Improvements
+
+* User Authentication
+* Watchlist Feature
+* Personalized Recommendations
+* Collaborative Filtering
+* Genre-Based Filtering
+* Movie Trailers
+* Advanced Search
+* Favorites System
+* User Profiles
+
+---
+
+# 🤝 Contributing
 
 Contributions are welcome.
 
-1. Fork the repository
-2. Create a feature branch
+### Fork Repository
+
+```bash
+git fork
+```
+
+### Create Branch
 
 ```bash
 git checkout -b feature/new-feature
 ```
 
-3. Commit your changes
+### Commit Changes
 
 ```bash
 git commit -m "Add new feature"
 ```
 
-4. Push to GitHub
+### Push Changes
 
 ```bash
 git push origin feature/new-feature
 ```
 
-5. Open a Pull Request
+### Open Pull Request
+
+Submit your Pull Request for review.
 
 ---
 
-## 📜 License
+# 📜 License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-**Sourit Dev**
+### Sourit Dev
 
 GitHub:
 https://github.com/Souritdev
 
+LinkedIn:
+(Add your LinkedIn profile here)
+
 ---
 
-⭐ If you found this project useful, consider giving it a star.
+## ⭐ Support
+
+If you found this project useful:
+
+* Star the repository
+* Share the project
+* Give feedback
+* Contribute improvements
+
+⭐ Thank you for visiting the project!
